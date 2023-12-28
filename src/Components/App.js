@@ -43,7 +43,8 @@ function reducer(state, action) {
       return {
         ...state,
         status: "finished",
-        highScore: state.points > state.points ? state.points : state.highScore,
+        highScore:
+          state.points > state.highScore ? state.points : state.highScore,
       };
     case "restart":
       return { ...initialState, questions: state.questions, status: "ready" };
