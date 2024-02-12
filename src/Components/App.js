@@ -1,4 +1,3 @@
-import { useEffect, useReducer } from "react";
 import Header from "./Header";
 import Main from "./Main";
 import Loader from "./Loader";
@@ -10,11 +9,10 @@ import Progress from "./Progress";
 import FinishScreen from "./FinishScreen";
 import Footer from "./Footer";
 import Timer from "./Timer";
-
-
+import { useQuiz } from "./AppProvider";
 
 function App() {
-
+  const { status } = useQuiz();
   return (
     <div className="App">
       <Header />
