@@ -80,8 +80,8 @@ export default function AppProvider({ children }) {
 
   return (
     <AppContext.Provider
-      value={
-        (questions,
+      value={{
+        questions,
         status,
         index,
         answer,
@@ -90,8 +90,8 @@ export default function AppProvider({ children }) {
         secondsRemaining,
         numQuestions,
         maxPossiblePoints,
-        dispatch)
-      }
+        dispatch,
+      }}
     >
       {children}
     </AppContext.Provider>
